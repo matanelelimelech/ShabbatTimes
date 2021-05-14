@@ -8,11 +8,29 @@ result = requests.get('https://www.hebcal.com/shabbat?cfg=json&amp;lg=h&;M=on;&b
 data = json.loads(result.text)
 
 print(data['date'])
-print(data['location']['city'])
 print(data['items'][1]['title'])
+print(data['location']['city'])
 print(data['items'][0]['title'])
 print(data['items'][2]['title'])
 
+result = requests.get('https://www.hebcal.com/shabbat?cfg=json&amp;lg=h&;M=on;&b=on&geonameid=281184')
+data = json.loads(result.text)
+
+print(data['location']['city'])
+print(data['items'][0]['title'])
+print(data['items'][2]['title'])
+
+result = requests.get('https://www.hebcal.com/shabbat?cfg=json&amp;lg=h&;M=on;&b=on&geonameid=293397')
+data = json.loads(result.text)
+print(data['location']['city'])
+print(data['items'][0]['title'])
+print(data['items'][2]['title'])
+
+result = requests.get('https://www.hebcal.com/shabbat?cfg=json&amp;lg=h&;M=on;&b=on&geonameid=295530')
+data = json.loads(result.text)
+print(data['location']['city'])
+print(data['items'][0]['title'])
+print(data['items'][2]['title'])
 
 # print(data['items'][]['title'])
 
