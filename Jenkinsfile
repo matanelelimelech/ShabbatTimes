@@ -1,4 +1,4 @@
-lpipeline {
+pipeline {
     agent { docker { image 'matanelelimelech/jenkinsdocker' } }
 
     stages {
