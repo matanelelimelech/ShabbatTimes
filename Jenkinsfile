@@ -1,4 +1,4 @@
-pipeline {
+lpipeline {
     agent { docker { image 'matanelelimelech/jenkinsdocker' } }
 
     stages {
@@ -8,9 +8,9 @@ pipeline {
             }
         }
         
-        stage('build') {
+        stage('deploy') {
             steps {
-                sh 'python itamar.py'
+                sh 'deploy.py'
             }
         }
     }
