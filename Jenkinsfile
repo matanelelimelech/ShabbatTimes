@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('test') {
             steps {
-                sh 'pylint itamar.py'
+                sh '/usr/bin/pylint itamar.py'
             }
         }
         stage('build') {
