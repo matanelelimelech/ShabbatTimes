@@ -1,1 +1,1 @@
-print 'big success'
+print ('big success')
