@@ -5,7 +5,8 @@ pipeline {
             steps {
                 sh 'pylint itamar.py'
             }
-        },stage('build') {
+        }
+        stage('build') {
             steps {
                 sh 'python itamar.py'
             }
