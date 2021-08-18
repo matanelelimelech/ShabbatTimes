@@ -1,9 +1,10 @@
 pipeline {
-    agent any
+    agent { docker { image 'python:3.5.1' } }
+
     stages {
         stage('test') {
             steps {
-                sh '/usr/bin/pylint itamar.py'
+                sh 'python test.py'
             }
         }
         stage('build') {
